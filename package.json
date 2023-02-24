@@ -19,11 +19,15 @@
     "build-storybook": "build-storybook"
   },
   "dependencies": {
+    "git-commit-msg-linter": "^4.7.3",
     "next": "^13.1.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@next/bundle-analyzer": "^13.1.2",
+    "@semantic-release/changelog": "^6.0.2",
+    "@semantic-release/git": "^10.0.1",
     "@storybook/addon-actions": "^6.5.9",
     "@storybook/addon-essentials": "^6.5.9",
     "@storybook/addon-interactions": "^6.5.9",
@@ -32,9 +36,6 @@
     "@storybook/manager-webpack5": "^6.5.9",
     "@storybook/react": "^6.5.9",
     "@storybook/testing-library": "^0.0.13",
-    "@next/bundle-analyzer": "^13.1.2",
-    "@semantic-release/changelog": "^6.0.2",
-    "@semantic-release/git": "^10.0.1",
     "@types/node": "^18.11.18",
     "@types/react": "^18.0.27",
     "@typescript-eslint/eslint-plugin": "^5.48.2",
