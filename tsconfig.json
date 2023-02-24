@@ -34,13 +34,13 @@
     "noEmit": true,
     "isolatedModules": true,
     "incremental": true,
-
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"],
       "@/public/*": ["./public/*"],
-      "@/styles/*": ["./styles/*"],
-      "@/components/*": ["./src/components/*"]
+      "@/components/*": ["./src/components/*"],
+      "@/partials/*": ["./src/UI/partials/*"],
+      "@/styles/*": ["./src/UI/styles/*"]
     }
   },
   "exclude": ["./out/**/*", "./node_modules/**/*", "cypress/**/*.ts"],
