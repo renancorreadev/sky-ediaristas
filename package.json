@@ -15,7 +15,7 @@
     "com": "cz",
     "prepare": "husky install",
     "postbuild": "next-sitemap",
-    "storybook": "start-storybook -p 6006",
+    "storybook": "start-storybook -p 6006 -s ./public",
     "build-storybook": "build-storybook"
   },
   "dependencies": {
@@ -35,10 +35,12 @@
     "@storybook/addon-essentials": "^6.5.9",
     "@storybook/addon-interactions": "^6.5.9",
     "@storybook/addon-links": "^6.5.9",
+    "@storybook/addons": "6.5.9",
     "@storybook/builder-webpack5": "^6.5.9",
     "@storybook/manager-webpack5": "^6.5.9",
     "@storybook/react": "^6.5.9",
     "@storybook/testing-library": "^0.0.13",
+    "@storybook/theming": "6.5.9",
     "@types/node": "^18.11.18",
     "@types/react": "^18.0.27",
     "@typescript-eslint/eslint-plugin": "^5.48.2",
