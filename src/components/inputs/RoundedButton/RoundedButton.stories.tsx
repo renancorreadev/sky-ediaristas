@@ -15,4 +15,5 @@ export const Default = Template.bind({});
 
 Default.args = {
   variant: 'contained',
+  children: 'Click',
 };
