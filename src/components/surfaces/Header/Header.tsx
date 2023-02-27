@@ -6,9 +6,11 @@ import {
   MenuList,
   Toolbar,
 } from '@mui/material';
+import { useState } from 'react';
 
 import RoundedButton from '@/components/inputs/RoundedButton/RoundedButton';
 import Link from '@/components/navigation/link/Link';
+import { useIsMobile } from '@/hooks/useIsMobile';
 
 import {
   ButtonsContainer,
@@ -16,13 +18,6 @@ import {
   HeaderDrawer,
   HeaderLogo,
 } from './Header.styled';
-
-const Header: React.FC = () => {
-  // eslint-disable-next-line @typescript-eslint/no-use-before-define
-  return <HeaderMobile />;
-};
-
-export default Header;
 
 export const HeaderDesktop: React.FC = () => {
   return (
@@ -51,23 +46,33 @@ export const HeaderDesktop: React.FC = () => {
 };
 
 const HeaderMobile: React.FC = () => {
+  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+
+  const handleOpenDrawer = () => {
+    setIsDrawerOpen(true);
+  };
+
   return (
     <HeaderAppBar>
       <Toolbar component={Container}>
-        <IconButton edge={'start'} color={'inherit'}>
+        <IconButton edge={'start'} color={'inherit'} onClick={handleOpenDrawer}>
           <i className="twf-bars" />
         </IconButton>
         <Link href="/">
           <HeaderLogo src="/img/logos/logo.svg" alt="logo e-diaristas" />
         </Link>
       </Toolbar>
-      <HeaderDrawer open={false}>
+      <HeaderDrawer
+        open={isDrawerOpen}
+        onClose={() => setIsDrawerOpen(false)}
+        onClick={() => setIsDrawerOpen(false)}
+      >
         <MenuList>
-          <Link href="/" Component={MenuItem}>
+          <Link href="/login" Component={MenuItem}>
             Login
           </Link>
           <Divider />
-          <Link href="/" Component={MenuItem}>
+          <Link href="/cadastro/diarista" Component={MenuItem}>
             Seja um(a) Diarista
           </Link>
         </MenuList>
@@ -75,3 +80,12 @@ const HeaderMobile: React.FC = () => {
     </HeaderAppBar>
   );
 };
+
+const Header: React.FC = () => {
+  // eslint-disable-next-line @typescript-eslint/no-use-before-define
+  const isMobile = useIsMobile();
+
+  return isMobile ? <HeaderMobile /> : <HeaderDesktop />;
+};
+
+export default Header;
