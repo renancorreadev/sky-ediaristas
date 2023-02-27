@@ -6,10 +6,13 @@
     "plugin:prettier/recommended"
   ],
   "rules": {
+    "simple-import-sort/imports": "off",
     "prettier/prettier": [
       "error",
+
       {
         "singleQuote": true,
+        "simple-import-sort/imports": "off",
         "endOfLine": "auto"
       }
     ]
