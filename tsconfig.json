@@ -35,7 +35,8 @@
       "@/public/*": ["./public/*"],
       "@/components/*": ["./src/components/*"],
       "@/partials/*": ["./src/UI/partials/*"],
-      "@/styles/*": ["./src/UI/styles/*"]
+      "@/styles/*": ["./src/UI/styles/*"],
+      "@/hooks/*": ["./src/hooks/*"]
     }
   },
   "exclude": ["./out/**/*", "./node_modules/**/*", "cypress/**/*.ts"],
