@@ -19,7 +19,6 @@
     "noFallthroughCasesInSwitch": true,
     "target": "es5",
     "outDir": "out",
-    "declaration": true,
     "sourceMap": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
