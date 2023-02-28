@@ -7,7 +7,11 @@ const Header: React.FC = () => {
   // eslint-disable-next-line @typescript-eslint/no-use-before-define
   const isMobile = useIsMobile();
 
-  return isMobile ? <HeaderMobile /> : <HeaderDesktop />;
+  return isMobile ? (
+    <HeaderMobile data-testid="header-app-bar-mobile" />
+  ) : (
+    <HeaderDesktop data-testid="header-app-bar" />
+  );
 };
 
 export default Header;
