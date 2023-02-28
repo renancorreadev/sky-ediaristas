@@ -1,13 +1,10 @@
-/* eslint-disable testing-library/prefer-screen-queries */
-// Header.test.tsx
-
-import { render } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import React from 'react';
 
 import { useIsMobile } from '@/hooks/useIsMobile';
 import { mockRouter } from '@/tests/mocks';
 
-import Header from './Header';
+import Header from './index';
 
 // Mock do useIsMobile
 jest.mock('@/hooks/useIsMobile', () => ({
@@ -23,8 +20,9 @@ describe('Header', () => {
     // Simula que não é um dispositivo móvel
     (useIsMobile as jest.Mock).mockReturnValue(false);
 
-    const { findByRole } = render(<Header />);
-    const header = await findByRole('header-app-bar');
+    render(<Header />);
+
+    const header = screen.getByRole('header-app-bar');
 
     expect(header).toBeInTheDocument();
   });
@@ -33,8 +31,8 @@ describe('Header', () => {
     // Simula que é um dispositivo móvel
     (useIsMobile as jest.Mock).mockReturnValue(true);
 
-    const { findByRole } = render(<Header />);
-    const header = await findByRole('header-app-bar-mobile');
+    render(<Header />);
+    const header = screen.getByRole('header-app-bar-mobile');
 
     expect(header).toBeInTheDocument();
   });

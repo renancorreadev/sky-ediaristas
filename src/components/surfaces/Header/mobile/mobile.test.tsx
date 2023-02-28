@@ -1,5 +1,4 @@
-/* eslint-disable testing-library/prefer-screen-queries */
-import { fireEvent, render } from '@testing-library/react';
+import { fireEvent, render, screen } from '@testing-library/react';
 
 import { mockRouter } from '@/tests/mocks';
 
@@ -11,13 +10,13 @@ describe('HeaderMobile component', () => {
   });
 
   test('should open drawer when clicking on the menu button', () => {
-    const { getByLabelText, getByText } = render(<HeaderMobile />);
+    render(<HeaderMobile />);
 
-    const menuButton = getByLabelText('open drawer');
+    const menuButton = screen.getByLabelText('open drawer');
     fireEvent.click(menuButton);
 
-    const loginLink = getByText('Login');
-    const diaristSignupLink = getByText('Seja um(a) Diarista');
+    const loginLink = screen.getByText('Login');
+    const diaristSignupLink = screen.getByText('Seja um(a) Diarista');
 
     expect(loginLink).toBeInTheDocument();
     expect(diaristSignupLink).toBeInTheDocument();
