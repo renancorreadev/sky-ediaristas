@@ -20,9 +20,14 @@ export const HeaderMobile: React.FC = () => {
   };
 
   return (
-    <HeaderAppBar>
+    <HeaderAppBar role="header-app-bar-mobile" id="header-mobile">
       <Toolbar component={Container}>
-        <IconButton edge={'start'} color={'inherit'} onClick={handleOpenDrawer}>
+        <IconButton
+          edge={'start'}
+          color={'inherit'}
+          onClick={handleOpenDrawer}
+          aria-label="open drawer"
+        >
           <i className="twf-bars" />
         </IconButton>
         <Link href="/">
@@ -33,6 +38,7 @@ export const HeaderMobile: React.FC = () => {
         open={isDrawerOpen}
         onClose={() => setIsDrawerOpen(false)}
         onClick={() => setIsDrawerOpen(false)}
+        role="dialog"
       >
         <MenuList>
           <Link href="/login" Component={MenuItem}>
