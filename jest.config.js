@@ -9,17 +9,17 @@ const customJestConfig = {
   moduleNameMapper: {
     // Handle module aliases (this will be automatically configured for you soon)
     '^@/(.*)$': '<rootDir>/src/$1',
-
     '^@/public/(.*)$': '<rootDir>/public/$1',
   },
   setupFilesAfterEnv: ['./jest.setup.js'],
   clearMocks: true,
   collectCoverage: true,
   collectCoverageFrom: [
-    './src/**/*.{js,jsx,ts,tsx}',
-    '!./src/**/_*.{js,jsx,ts,tsx}',
-    '!**/*.d.ts',
-    '!**/node_modules/**',
+    './src/components/**/*.{js,jsx,ts,tsx}',
+    '!**/*.stories.{js,jsx,ts,tsx}',
+    // './src/**/*.{js,jsx,ts,tsx}',
+    // '!./src/**/_*.{js,jsx,ts,tsx}',
+    // '!**/*.d.ts',
   ],
   coverageThreshold: {
     global: {

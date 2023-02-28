@@ -3825,6 +3825,11 @@
   dependencies:
     "@babel/runtime" "^7.12.5"
 
+"@testing-library/user-event@^14.4.3":
+  version "14.4.3"
+  resolved "https://registry.yarnpkg.com/@testing-library/user-event/-/user-event-14.4.3.tgz#af975e367743fa91989cd666666aec31a8f50591"
+  integrity sha512-kCUc5MEwaEMakkO5x7aoD+DLi02ehmEM2QCGWvNqAS1dV/fAvORWEjnjsEIvml59M7Y5kCkWN6fCCyPOe8OL6Q==
+
 "@tootallnate/once@2":
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/@tootallnate/once/-/once-2.0.0.tgz#f544a148d3ab35801c1f633a7441fd87c2e484bf"
@@ -3887,6 +3892,28 @@
   integrity sha512-1kbcJ40lLB7MHsj39U4Sh1uTd2E7rLEa79kmDpI6cy+XiXsteB3POdQomoq4FxszMrO3ZYchkhYJw7A2862b3w==
   dependencies:
     "@babel/types" "^7.3.0"
+
+"@types/cheerio@*":
+  version "0.22.31"
+  resolved "https://registry.yarnpkg.com/@types/cheerio/-/cheerio-0.22.31.tgz#b8538100653d6bb1b08a1e46dec75b4f2a5d5eb6"
+  integrity sha512-Kt7Cdjjdi2XWSfrZ53v4Of0wG3ZcmaegFXjMmz9tfNrZSkzzo36G0AL1YqSdcIA78Etjt6E609pt5h1xnQkPUw==
+  dependencies:
+    "@types/node" "*"
+
+"@types/enzyme-adapter-react-16@^1.0.6":
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/@types/enzyme-adapter-react-16/-/enzyme-adapter-react-16-1.0.6.tgz#8aca7ae2fd6c7137d869b6616e696d21bb8b0cec"
+  integrity sha512-VonDkZ15jzqDWL8mPFIQnnLtjwebuL9YnDkqeCDYnB4IVgwUm0mwKkqhrxLL6mb05xm7qqa3IE95m8CZE9imCg==
+  dependencies:
+    "@types/enzyme" "*"
+
+"@types/enzyme@*", "@types/enzyme@^3.10.12":
+  version "3.10.12"
+  resolved "https://registry.yarnpkg.com/@types/enzyme/-/enzyme-3.10.12.tgz#ac4494801b38188935580642f772ad18f72c132f"
+  integrity sha512-xryQlOEIe1TduDWAOphR0ihfebKFSWOXpIsk+70JskCfRfW+xALdnJ0r1ZOTo85F9Qsjk6vtlU7edTYHbls9tA==
+  dependencies:
+    "@types/cheerio" "*"
+    "@types/react" "*"
 
 "@types/eslint-scope@^3.7.3":
   version "3.7.4"
