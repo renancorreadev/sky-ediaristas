@@ -6,6 +6,16 @@
     "plugin:prettier/recommended"
   ],
   "rules": {
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never"
+      }
+    ],
     "@typescript-eslint/no-unused-expressions": "off",
     "react/jsx-max-props-per-line": [2, { "when": "always" }],
     "react/jsx-tag-spacing": [2, { "beforeSelfClosing": "always" }],
@@ -39,6 +49,16 @@
           {
             "singleQuote": true,
             "endOfLine": "auto"
+          }
+        ],
+        "import/extensions": [
+          "error",
+          "ignorePackages",
+          {
+            "js": "never",
+            "jsx": "never",
+            "ts": "never",
+            "tsx": "never"
           }
         ],
         "@typescript-eslint/no-unused-expressions": "off",

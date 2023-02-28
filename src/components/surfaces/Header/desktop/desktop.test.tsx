@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import React from 'react';
 
-import { mockRouter } from '@/tests/mocks';
+import { mockRouter } from '@/tests/test.utils';
 
 import { HeaderDesktop } from './index';
 

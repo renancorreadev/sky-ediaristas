@@ -2,7 +2,7 @@ import { render, screen } from '@testing-library/react';
 import React from 'react';
 
 import { useIsMobile } from '@/hooks/useIsMobile';
-import { mockRouter } from '@/tests/mocks';
+import { mockRouter } from '@/tests/test.utils';
 
 import Header from './index';
 

@@ -1,6 +1,6 @@
 import { fireEvent, render, screen } from '@testing-library/react';
 
-import { mockRouter } from '@/tests/mocks';
+import { mockRouter } from '@/tests/test.utils';
 
 import { HeaderMobile } from './index';
 

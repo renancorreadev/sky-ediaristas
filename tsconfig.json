@@ -32,12 +32,13 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"],
+      "@/tests/*": ["./src/tests/*"],
+      "@/__mocks__/*": ["./__mocks__/*"],
       "@/public/*": ["./public/*"],
       "@/components/*": ["./src/components/*"],
       "@/partials/*": ["./src/UI/partials/*"],
       "@/styles/*": ["./src/UI/styles/*"],
-      "@/hooks/*": ["./src/hooks/*"],
-      "@/tests/*": ["./src/tests/*"]
+      "@/hooks/*": ["./src/hooks/*"]
     }
   },
   "exclude": ["./out/**/*", "./node_modules/**/*", "cypress/**/*.ts"],
