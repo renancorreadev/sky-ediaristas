@@ -36,7 +36,8 @@
       "@/components/*": ["./src/components/*"],
       "@/partials/*": ["./src/UI/partials/*"],
       "@/styles/*": ["./src/UI/styles/*"],
-      "@/hooks/*": ["./src/hooks/*"]
+      "@/hooks/*": ["./src/hooks/*"],
+      "@/tests/*": ["./src/tests/*"]
     }
   },
   "exclude": ["./out/**/*", "./node_modules/**/*", "cypress/**/*.ts"],

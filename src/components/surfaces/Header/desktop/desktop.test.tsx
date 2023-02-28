@@ -1,31 +1,16 @@
 import { render, screen } from '@testing-library/react';
-import type { NextRouter } from 'next/router';
-import { useRouter } from 'next/router';
 import React from 'react';
+
+import { mockRouter } from '@/tests/mocks';
 
 import { HeaderDesktop } from './index';
 
-jest.mock(
-  'next/link',
-  () =>
-    ({ children }: { children: React.ReactNode }) =>
-      children
-);
-
-jest.mock('next/router', () => ({
-  useRouter: jest.fn(),
-}));
-
 describe('HeaderDesktop component', () => {
-  test('should render correctly', () => {
-    const router = {
-      basePath: '',
-      pathname: '/',
-      query: {},
-      asPath: '',
-    } as NextRouter;
-    (useRouter as jest.Mock).mockReturnValue(router);
+  beforeEach(() => {
+    mockRouter;
+  });
 
+  test('should render correctly', () => {
     render(<HeaderDesktop />);
 
     const logo = screen.getByAltText('logo e-diaristas');

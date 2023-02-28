@@ -2,24 +2,12 @@
 // Header.test.tsx
 
 import { render } from '@testing-library/react';
-import type { NextRouter } from 'next/router';
-import { useRouter } from 'next/router';
 import React from 'react';
 
 import { useIsMobile } from '@/hooks/useIsMobile';
+import { mockRouter } from '@/tests/mocks';
 
 import Header from './Header';
-
-jest.mock(
-  'next/link',
-  () =>
-    ({ children }: { children: React.ReactNode }) =>
-      children
-);
-
-jest.mock('next/router', () => ({
-  useRouter: jest.fn(),
-}));
 
 // Mock do useIsMobile
 jest.mock('@/hooks/useIsMobile', () => ({
@@ -27,15 +15,11 @@ jest.mock('@/hooks/useIsMobile', () => ({
 }));
 
 describe('Header', () => {
-  it('should render HeaderDesktop when is not mobile', async () => {
-    const router = {
-      basePath: '',
-      pathname: '/',
-      query: {},
-      asPath: '',
-    } as NextRouter;
-    (useRouter as jest.Mock).mockReturnValue(router);
+  beforeEach(() => {
+    mockRouter;
+  });
 
+  it('should render HeaderDesktop when is not mobile', async () => {
     // Simula que não é um dispositivo móvel
     (useIsMobile as jest.Mock).mockReturnValue(false);
 
@@ -46,14 +30,6 @@ describe('Header', () => {
   });
 
   it('should render HeaderMobile when is mobile', async () => {
-    const router = {
-      basePath: '',
-      pathname: '/',
-      query: {},
-      asPath: '',
-    } as NextRouter;
-    (useRouter as jest.Mock).mockReturnValue(router);
-
     // Simula que é um dispositivo móvel
     (useIsMobile as jest.Mock).mockReturnValue(true);
 
