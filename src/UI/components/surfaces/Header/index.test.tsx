@@ -7,7 +7,7 @@ import { mockRouter } from '@/tests/test.utils';
 import Header from './index';
 
 // Mock do useIsMobile
-jest.mock('@/hooks/useIsMobile', () => ({
+jest.mock('../../../../data/hooks/useIsMobile', () => ({
   useIsMobile: jest.fn(),
 }));
 
