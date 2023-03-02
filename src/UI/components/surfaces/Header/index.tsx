@@ -1,4 +1,4 @@
-import { useIsMobile } from '@/hooks/useIsMobile';
+import { useIsMobile } from '@/data/hooks/useIsMobile';
 
 import { HeaderDesktop } from './desktop';
 import { HeaderMobile } from './mobile';

@@ -7,7 +7,7 @@ import type { PropsWithChildren } from 'react';
 import { useEffect, useState } from 'react';
 
 export interface LinkProps {
-  href: string;
+  href?: string;
   mui?: MuiLinkProps | ButtonProps;
   next?: NextLinkProps;
   Component?: React.ElementType;
@@ -15,7 +15,7 @@ export interface LinkProps {
 
 const Link: React.FC<PropsWithChildren<LinkProps>> = ({
   children,
-  href,
+  href = '',
   next,
   mui,
   Component = MuiLink,
