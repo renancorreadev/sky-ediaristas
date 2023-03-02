@@ -8,7 +8,7 @@ import {
 } from '@mui/material';
 import React, { useState } from 'react';
 
-import Link from '@/components/navigation/link/Link';
+import Link from '@/UI/components/navigation/link/Link';
 
 import { HeaderAppBar, HeaderDrawer, HeaderLogo } from '../Header.styled';
 

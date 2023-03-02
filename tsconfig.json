@@ -35,7 +35,7 @@
       "@/tests/*": ["./src/tests/*"],
       "@/__mocks__/*": ["./__mocks__/*"],
       "@/public/*": ["./public/*"],
-      "@/components/*": ["./src/components/*"],
+      "@/components/*": ["src/UI/components/*"],
       "@/partials/*": ["./src/UI/partials/*"],
       "@/styles/*": ["./src/UI/styles/*"],
       "@/hooks/*": ["./src/hooks/*"]

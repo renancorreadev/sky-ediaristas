@@ -1,7 +1,7 @@
 import { Box, List, Typography } from '@mui/material';
 import React from 'react';
 
-import Link from '@/components/navigation/link/Link';
+import Link from '@/UI/components/navigation/link/Link';
 
 import {
   AppList,

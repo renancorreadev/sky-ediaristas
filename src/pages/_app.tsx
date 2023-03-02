@@ -4,8 +4,8 @@ import { ThemeProvider } from '@mui/material';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
 
-import { Footer } from '@/components/surfaces/Footer';
-import Header from '@/components/surfaces/Header';
+import { Footer } from '@/UI/components/surfaces/Footer';
+import Header from '@/UI/components/surfaces/Header';
 import { AppContainer } from '@/UI/pages/AppContainer.styled';
 
 import theme from '../UI/theme/theme';
