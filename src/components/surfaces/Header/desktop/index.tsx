@@ -10,7 +10,7 @@ export const HeaderDesktop: React.FC = () => {
   return (
     <HeaderAppBar id="header" role="header-app-bar">
       <Toolbar component={Container}>
-        <Link href="/">
+        <Link href="/" Component={RoundedButton}>
           <HeaderLogo src="/img/logos/logo.svg" alt="logo e-diaristas" />
         </Link>
 
@@ -25,7 +25,9 @@ export const HeaderDesktop: React.FC = () => {
           >
             Seja um Diarista
           </Link>
-          <Link href="/login">Login</Link>
+          <Link Component={RoundedButton} href="/login">
+            Login
+          </Link>
         </ButtonsContainer>
       </Toolbar>
     </HeaderAppBar>

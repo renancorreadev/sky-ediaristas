@@ -3,29 +3,40 @@ import { Link as MuiLink } from '@mui/material';
 import type { LinkProps as NextLinkProps } from 'next/link';
 import NextLink from 'next/link';
 import Router from 'next/router';
-import type { ElementType, PropsWithChildren } from 'react';
-import React from 'react';
+import type { PropsWithChildren } from 'react';
+import { useEffect, useState } from 'react';
 
-interface LinkProps {
+export interface LinkProps {
   href: string;
   mui?: MuiLinkProps | ButtonProps;
-  nextLink?: NextLinkProps;
-  Component?: ElementType;
+  next?: NextLinkProps;
+  Component?: React.ElementType;
 }
 
 const Link: React.FC<PropsWithChildren<LinkProps>> = ({
   children,
   href,
-  nextLink,
+  next,
   mui,
   Component = MuiLink,
   ...props
 }) => {
+  const [isMounted, setIsMounted] = useState(false);
   const isNextEnv = Boolean(Router.router);
 
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  if (!isMounted) {
+    return null;
+  }
+
   return isNextEnv ? (
-    <NextLink href={href} passHref {...nextLink}>
-      <Component {...mui}>{children}</Component>
+    <NextLink href={href} passHref {...next}>
+      <Component {...mui} {...props}>
+        {children}
+      </Component>
     </NextLink>
   ) : (
     <Component href={href} {...mui} {...props}>

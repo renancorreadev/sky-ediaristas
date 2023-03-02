@@ -24,6 +24,7 @@ export const Footer: React.FC = () => {
           <List>
             <FooterListItem>
               <Link
+                Component={'span'}
                 href="/encontrar-diarista"
                 mui={{ color: 'inherit', variant: 'body2' }}
               >
@@ -32,6 +33,7 @@ export const Footer: React.FC = () => {
             </FooterListItem>
             <FooterListItem>
               <Link
+                Component={'span'}
                 href="/encontrar-diarista"
                 mui={{ color: 'inherit', variant: 'body2' }}
               >
@@ -39,12 +41,20 @@ export const Footer: React.FC = () => {
               </Link>
             </FooterListItem>
             <FooterListItem>
-              <Link href="/" mui={{ color: 'inherit', variant: 'body2' }}>
+              <Link
+                Component={'span'}
+                href="/"
+                mui={{ color: 'inherit', variant: 'body2' }}
+              >
                 Porque usar o E-diaristas?
               </Link>
             </FooterListItem>
             <FooterListItem>
-              <Link href="/" mui={{ color: 'inherit', variant: 'body2' }}>
+              <Link
+                Component={'span'}
+                href="/"
+                mui={{ color: 'inherit', variant: 'body2' }}
+              >
                 Principais Dúvidas
               </Link>
             </FooterListItem>
