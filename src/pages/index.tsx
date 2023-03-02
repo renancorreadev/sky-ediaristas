@@ -1,5 +1,7 @@
 import type { GetStaticProps, NextPage } from 'next';
 
+import Presentation from '@/UI/partials/index/_presentation';
+
 export const getStaticProps: GetStaticProps = async () => {
   return {
     props: {
@@ -8,8 +10,8 @@ export const getStaticProps: GetStaticProps = async () => {
   };
 };
 
-const Index: NextPage<{ title: string }> = (props) => {
-  return <div>{props.title}</div>;
+const Index: NextPage<{ title: string }> = () => {
+  return <Presentation />;
 };
 
 export default Index;

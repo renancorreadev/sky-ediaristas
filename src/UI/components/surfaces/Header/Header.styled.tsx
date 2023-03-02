@@ -1,7 +1,10 @@
+import type { AppBarProps } from '@mui/material';
 import { AppBar, Drawer } from '@mui/material';
 import { styled } from '@mui/material/styles';
 
-export const HeaderAppBar = styled(AppBar)`
+export const HeaderAppBar = styled((props: AppBarProps) => (
+  <AppBar position="sticky" {...props} />
+))`
   &.MuiAppBar-root {
     background-color: ${({ theme }) => theme.palette.background.paper};
     box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.05);

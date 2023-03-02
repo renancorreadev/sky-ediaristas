@@ -8,7 +8,7 @@ import { ButtonsContainer, HeaderAppBar, HeaderLogo } from '../Header.styled';
 
 export const HeaderDesktop: React.FC = () => {
   return (
-    <HeaderAppBar id="header" role="header-app-bar">
+    <HeaderAppBar id="header" role="header-app-bar" position="sticky">
       <Toolbar component={Container}>
         <Link href="/" Component={RoundedButton}>
           <HeaderLogo src="/img/logos/logo.svg" alt="logo e-diaristas" />
