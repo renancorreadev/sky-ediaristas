@@ -41,7 +41,7 @@ const Presentation = () => {
         </SectionButton>
 
         <SectionPictureContainer>
-          <img src={cleanerPicture} alt="" />
+          <img src={cleanerPicture} alt="cleaner-picture" />
         </SectionPictureContainer>
       </ContaienerStyled>
 
